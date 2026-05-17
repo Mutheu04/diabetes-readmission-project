@@ -108,19 +108,19 @@ Even with modest predictive performance, the model has practical value as a **sc
 - **Leakage Prevention:** Deduplicated by patient ID to prevent the same patient appearing in both train and test sets
 
 ## Project Structure
+```
 ├── app/
 │   └── app.py                          # Streamlit dashboard and prediction tool
 ├── data/
 │   ├── raw/                            # Original scraped data (gitignored)
 │   └── processed/                      # Cleaned dataset
 ├── notebooks/
-│   └── Diabetes Re-admission.ipynb     # Full EDA, cleaning, feature engineering, and modelling
+│   └── Diabetes Re-admission.ipynb     # Full pipeline: scraping, EDA, cleaning, feature engineering, modelling
 ├── outputs/                            # Charts, saved model (.pkl), SHAP plots
-├── src/
-│   └── scrape_dataset.py               # Webscrape dataset from UCI
 ├── .gitignore
 ├── README.md
 └── requirements.txt
+```
 
 ## Tools and Technologies
 
@@ -141,13 +141,12 @@ venv\Scripts\activate           # Windows
 # Install dependencies
 pip install -r requirements.txt
 
-# Scrape the dataset
-python src/scrape_dataset.py
+# Run the full pipeline
+# Open and run the notebook: notebooks/Diabetes Re-admission.ipynb
 
 # Run the Streamlit dashboard
 streamlit run app/app.py
 ```
-
 ## Author
 
 **Ruth Mutheu** — Data Scientist
